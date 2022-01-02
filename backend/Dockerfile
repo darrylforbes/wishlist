@@ -1,8 +1,14 @@
 FROM node:16
 
-WORKDIR /app
+WORKDIR /backend
 EXPOSE 3000
 
-COPY node_modules package-lock.json package.json ./
+COPY package.json package-lock.json .
 RUN npm install
-CMD ["npx", "nodemon", "app.js"]
+COPY app.js .
+COPY bin ./bin/
+COPY public ./public/
+COPY routes ./routes/
+COPY views ./views/
+
+CMD DEBUG=backend:* npm start

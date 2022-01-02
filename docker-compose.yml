@@ -3,6 +3,10 @@ services:
     build:
       context: ./backend
     volumes:
-      - ./backend:/app
+      - ./backend/app.js:/backend/app.js
+      - ./backend/bin:/backend/bin
+      - ./backend/public:/backend/public
+      - ./backend/routes:/backend/routes
+      - ./backend/views:/backend/views
     ports:
       - "3000:3000"
