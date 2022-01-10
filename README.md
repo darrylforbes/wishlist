@@ -10,3 +10,4 @@
 ## Contributors
 - Darryl Forbes
 - Kevin Forbes
+- Alec Weidner
